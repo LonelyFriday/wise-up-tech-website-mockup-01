@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* ===== WISE UP TECH — MINIMAL & WARM DESIGN SYSTEM ===== */
+
+:root {
+    /* Primary */
+    --navy: #1B4F8A;
+    --navy-dark: #143D6B;
+    --navy-light: #2563A8;
+
+    /* Accent */
+    --golden: #F5A623;
+    --golden-light: #FFC857;
+    --warm-yellow: #FFF8E1;
+
+    /* Backgrounds */
+    --light-blue: #E8F1FA;
+    --off-white: #FAFBFD;
+
+    /* Text */
+    --text-dark: #2D3748;
+    --text-body: #4A5568;
+    --text-muted: #64748B;
+
+    /* Borders */
+    --border-light: #E2E8F0;
+}
+
+/* Base typography */
+body {
+    font-family: 'Inter', 'Prompt', sans-serif;
+    color: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--text-dark);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+    font-family: 'Prompt', sans-serif;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background-color: var(--light-blue);
+    color: var(--navy);
+}
+
+/* Animations */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+@keyframes subtle-pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-subtle-pulse {
+    animation: subtle-pulse 4s ease-in-out infinite;
+}
+
+/* Stagger delays */
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
