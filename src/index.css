@@ -1,135 +1,77 @@
 @import "tailwindcss";
+@import "./styles/animations.css";
 
-/* ===== WISE UP TECH — MINIMAL & WARM DESIGN SYSTEM ===== */
+/* ===== WISE UP TECH — DESIGN SYSTEM ===== */
 
-:root {
-    /* Primary */
-    --navy: #1B4F8A;
-    --navy-dark: #143D6B;
-    --navy-light: #2563A8;
+@theme {
+  /* Primary */
+  --color-navy: #1B4F8A;
+  --color-navy-dark: #143D6B;
+  --color-navy-light: #2563A8;
 
-    /* Accent */
-    --golden: #F5A623;
-    --golden-light: #FFC857;
-    --warm-yellow: #FFF8E1;
+  /* Accent */
+  --color-golden: #F5A623;
+  --color-golden-light: #FFC857;
+  --color-warm-yellow: #FFF8E1;
 
-    /* Backgrounds */
-    --light-blue: #E8F1FA;
-    --off-white: #FAFBFD;
+  /* Backgrounds */
+  --color-light-blue: #E8F1FA;
+  --color-off-white: #FAFBFD;
 
-    /* Text */
-    --text-dark: #2D3748;
-    --text-body: #4A5568;
-    --text-muted: #64748B;
+  /* Text */
+  --color-text-dark: #2D3748;
+  --color-text-body: #4A5568;
+  --color-text-muted: #64748B;
 
-    /* Borders */
-    --border-light: #E2E8F0;
+  /* Borders */
+  --color-border-light: #E2E8F0;
+
+  /* Footer */
+  --color-footer-bg: #1B3A5C;
+  --color-footer-text: #CBD5E0;
+  --color-footer-border: #2D4A6A;
+
+  /* Accent muted */
+  --color-golden-muted: #B07D10;
 }
 
 /* Base typography */
 body {
-    font-family: 'Inter', 'Prompt', sans-serif;
-    color: var(--text-body);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', 'Prompt', sans-serif;
+  color: var(--color-text-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer base {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: var(--text-dark);
-    }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-dark);
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.font-heading {
-    font-family: 'Prompt', sans-serif;
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Prompt', sans-serif;
 }
 
 /* Smooth scroll */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Selection color */
 ::selection {
-    background-color: var(--light-blue);
-    color: var(--navy);
+  background-color: var(--color-light-blue);
+  color: var(--color-navy);
 }
 
-/* Animations */
-@keyframes fade-in-up {
-    0% {
-        opacity: 0;
-        transform: translateY(24px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Focus-visible ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-12px);
-    }
-}
-
-@keyframes subtle-pulse {
-
-    0%,
-    100% {
-        opacity: 0.6;
-    }
-
-    50% {
-        opacity: 0.8;
-    }
-}
-
-.animate-fade-in-up {
-    animation: fade-in-up 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    opacity: 0;
-}
-
-.animate-float {
-    animation: float 6s ease-in-out infinite;
-}
-
-.animate-subtle-pulse {
-    animation: subtle-pulse 4s ease-in-out infinite;
-}
-
-/* Stagger delays */
-.delay-100 {
-    animation-delay: 100ms;
-}
-
-.delay-200 {
-    animation-delay: 200ms;
-}
-
-.delay-300 {
-    animation-delay: 300ms;
-}
-
-.delay-400 {
-    animation-delay: 400ms;
+/* Remove focus outline for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
 }
