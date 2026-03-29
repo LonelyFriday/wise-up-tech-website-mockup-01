@@ -91,7 +91,12 @@ export default function SolutionsPage() {
                       </h3>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {item.tags.map((tag, tagIdx) => (
-                          <Badge key={tagIdx}>{tag}</Badge>
+                          <Badge
+                            key={tagIdx}
+                            className={tag === "LINE OA" ? "bg-[#06C755]/10 text-[#06C755] border-[#06C755]/20" : ""}
+                          >
+                            {tag}
+                          </Badge>
                         ))}
                       </div>
                       <p className="text-text-muted text-sm leading-relaxed">

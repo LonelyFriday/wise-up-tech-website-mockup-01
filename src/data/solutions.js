@@ -1,6 +1,6 @@
 export const showcaseItems = [
   {
-    title: "Wise Translation",
+    title: "Wise Translator",
     tag: "LINE OA",
     image: "/wise-translator-logo.png",
     result: "แปลภาษาทันทีผ่าน LINE ง่ายแค่ส่งข้อความ",
@@ -25,7 +25,7 @@ export const portfolioSections = [
     category: "AI & Data Intelligence",
     items: [
       {
-        title: "Wise Translation",
+        title: "Wise Translator",
         tags: ["LINE OA", "Translation", "AI"],
         desc: "บริการแปลภาษาอัจฉริยะผ่าน LINE OA ส่งข้อความเข้ามา ระบบแปลให้ทันทีด้วย AI รองรับหลายภาษา ใช้งานง่าย ไม่ต้องติดตั้งแอปเพิ่ม",
         iconKey: "languages",

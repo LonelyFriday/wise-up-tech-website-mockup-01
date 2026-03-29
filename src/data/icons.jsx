@@ -2,6 +2,7 @@ import {
   Briefcase, Code2, BrainCircuit, Cpu, Database, ShieldCheck,
   Lightbulb, PenTool, Rocket, ShoppingBag, Bot, Eye,
   BarChart3, FileText, Zap, MonitorSmartphone, Languages,
+  ClipboardList, CheckCircle2,
 } from 'lucide-react';
 
 const iconMap = {
@@ -22,6 +23,8 @@ const iconMap = {
   zap: Zap,
   monitor: MonitorSmartphone,
   languages: Languages,
+  clipboardList: ClipboardList,
+  checkCircle: CheckCircle2,
 };
 
 export function getIcon(key, props = {}) {

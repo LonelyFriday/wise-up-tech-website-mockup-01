@@ -33,10 +33,30 @@ export const techStack = [
 ];
 
 export const processSteps = [
-  { iconKey: "lightbulb", step: "01", title: "Plan", desc: "วิเคราะห์โจทย์", variant: "primary" },
-  { iconKey: "penTool", step: "02", title: "Design", desc: "ออกแบบ UX/UI", variant: "accent" },
-  { iconKey: "code", step: "03", title: "Build", desc: "พัฒนาและทดสอบ", variant: "primary" },
-  { iconKey: "rocket", step: "04", title: "Deploy", desc: "ส่งมอบและดูแล", variant: "accent" },
+  {
+    step: "01", iconKey: "clipboardList", title: "Plan", variant: "primary",
+    titleThai: "วางแผนโปรเจกต์",
+    desc: "วิเคราะห์โจทย์ธุรกิจ กำหนดขอบเขตงาน และวาง Roadmap ร่วมกัน",
+    deliverables: ["Project Scope & Timeline", "ประมาณการงบที่ชัดเจน", "Kickoff Meeting"],
+  },
+  {
+    step: "02", iconKey: "penTool", title: "Design", variant: "accent",
+    titleThai: "ออกแบบโซลูชัน",
+    desc: "ออกแบบ UX/UI และสถาปัตยกรรมระบบ ให้คุณเห็นภาพก่อนลงมือสร้าง",
+    deliverables: ["Wireframe & Prototype", "System Architecture", "คุณรีวิวและ Approve"],
+  },
+  {
+    step: "03", iconKey: "code", title: "Build", variant: "primary",
+    titleThai: "พัฒนาและทดสอบ",
+    desc: "พัฒนาระบบเป็น Sprint อัปเดตความคืบหน้าทุกสัปดาห์",
+    deliverables: ["Sprint Demo ทุก 2 สัปดาห์", "รายงานความคืบหน้า", "QA & Testing"],
+  },
+  {
+    step: "04", iconKey: "rocket", title: "Deploy", variant: "accent",
+    titleThai: "ส่งมอบและดูแล",
+    desc: "ส่งมอบงาน พร้อมซัพพอร์ตหลัง Go-Live",
+    deliverables: ["Go-Live Checklist", "Training ทีมงาน", "Post-launch Support"],
+  },
 ];
 
 export const whyUsPoints = [

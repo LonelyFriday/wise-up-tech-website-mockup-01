@@ -95,7 +95,7 @@ export default function ContactPage() {
             >
               {[
                 { icon: <MapPin size={20} />, label: "Location", value: "Bangkok, Thailand" },
-                { icon: <Mail size={20} />, label: "Email", value: "contact@wiseuptech.com" },
+                { icon: <Mail size={20} />, label: "Email", value: "contact@wiseuptech.co" },
                 { icon: <MessageSquare size={20} />, label: "LINE", value: "@wiseuptech" },
               ].map((item, idx) => (
                 <motion.div

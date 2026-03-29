@@ -39,7 +39,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2">
               <MessageSquare size={16} className="text-golden" />
-              <span>contact@wiseuptech.com</span>
+              <span>contact@wiseuptech.co</span>
             </li>
           </ul>
         </div>
